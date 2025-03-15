@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+
+
+.nav-wrapper{
+    width: 100%;
+    background: linear-gradient(to right, #E3D1C6, #F5ECE3); /* Warm beige gradient */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+nav{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: center;
+    align-items: center;
+}
+
+nav a{
+    width: 15vw;
+    height: auto;
+    padding: 1vw;
+    text-align: center;
+    font-size: calc(1.5rem + 1vw);
+    text-decoration: none;
+    color: black;
+    font-family: perfecto;
+}
+nav a:hover{
+    background-color: hsl(350, 51%, 98%);
+}
+
+@font-face{
+    font-family: perfecto;
+    src: url(assets/fonts/PerfectoCalligraphy.ttf);
+}
+@font-face{
+    font-family: robotto;
+    src: url(assets/fonts/roboto-font-thietkeinancamap/Roboto-Regular.ttf);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        width: 90vw;
+    }
+    nav a{
+        font-size: calc(0.65rem + 2.1vw);
+    }
+}

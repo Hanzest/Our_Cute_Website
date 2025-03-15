@@ -1,0 +1,228 @@
+
+
+.large-wrapper{
+    background-color: #F8F6F4; /* Soft beige */
+}
+
+#homeHero{
+    justify-self: center;
+    background: url("./assets/graphics assets/Miki/we-kyyeu.jpeg");
+    height: 45.4vw;
+    background-size: cover;
+    width: 34vw;
+    animation: fadeInUp 2s forwards;
+    position: relative;
+}
+.home-btn{
+    overflow: hidden;
+    padding: 5px;
+    border: 2px solid rgb(40, 40, 40);
+    font-size: 1.8vw;
+    background-color: white;
+    border-radius: 2vw;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 100;
+}
+.home-btn:hover{
+    color: white;
+    background-color: #ea748e;
+}
+#cutemsg1{
+    /* top right */
+    width: 15vw;
+    left: 37vw;
+    top: 1.5vw;
+    position: absolute;
+}
+#cutemsg2{
+    /* top left */
+    width: 15vw;
+    left: -18vw;
+    top: 2.5vw;
+    position: absolute;
+}
+#cutemsg3{
+    /* bottom left */
+    width: 15vw;
+    left: -18vw;
+    top: 24vw;
+    position: absolute;
+}
+#cutemsg4{
+    /* bottom right */
+    width: 15vw;
+    left: 36vw;
+    top: 21.5vw;
+    position: absolute;
+}
+
+
+#homeSticker-1{
+                /* top right */
+    height: 30%;
+    top: 7vw;
+    left: 40vw;
+    position: absolute;
+}
+#homeSticker-2{
+                /* bottom left */
+    height: 50%;
+    top: 23vw;
+    left: -28vw;
+    position: absolute;
+}
+#homeSticker-5{
+                /* top left */
+    height: 30%;
+    top: 7vw;
+    left: -25vw;
+    position: absolute;
+}
+#homeSticker-4{
+                /* bottom right */
+    height: 30%;
+    top: 27vw;
+    left: 40vw;
+    position: absolute;
+}
+
+#homeGap{
+    height: 20vh;
+}
+
+#home-intro{
+    height: auto;
+    justify-self: center;
+    width: 80vw;
+    padding: 25px;
+    background-size: cover;
+    background: white;
+}
+
+.home-large-container {
+    width: 95%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: auto;
+    gap: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+.home-child-container{
+    padding-left: 3px;
+}
+.justifier{
+    
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: robotto;
+    transform: translateY(30px);
+    opacity: 0;
+}
+.center{
+    text-align: center;
+    font-family: robotto;
+}
+p{
+    font-size: 1rem;
+}
+
+.home-intro-img {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px; /* Soft rounded corners */
+    display: block;
+    object-fit: cover;
+    transition: 0.25s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+.home-intro-img:hover{
+    transform: translateY(-10px);
+    box-shadow: 2px 6px 8px 2px rgb(180, 180, 180);
+}
+
+
+.scroll-down {
+    text-align: center;
+    font-size: 1.2rem;
+    animation: fadeIn 0.75s infinite alternate;
+}
+.heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 24px;
+    animation: floatUp 3s linear forwards;
+    opacity: 1;
+}
+
+
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@font-face{
+    font-family: robotto;
+    src: url(assets/fonts/roboto-font-thietkeinancamap/Roboto-Regular.ttf);
+}
+
+@media screen and (max-width: 900px) {
+    .home-large-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 750px) {
+    .home-large-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    p{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .home-large-container {
+        grid-template-columns: repeat(auto-fit, minmax(60vw, 1fr));
+    }
+}
+
+/* Make images fit naturally in the Masonry grid */
+/* .home-intro-img:nth-child(1) { grid-row: span 5; }
+.home-intro-img:nth-child(2) { grid-row: span 4; }
+.home-intro-img:nth-child(3) { grid-row: span 6; }
+.home-intro-img:nth-child(4) { grid-row: span 3; }
+.home-intro-img:nth-child(5) { grid-row: span 5; }
+.home-intro-img:nth-child(6) { grid-row: span 4; }
+.home-intro-img:nth-child(7) { grid-row: span 6; }
+.home-intro-img:nth-child(8) { grid-row: span 3; }
+.home-intro-img:nth-child(9) { grid-row: span 5; }
+.home-intro-img:nth-child(10) { grid-row: span 4; }
+.home-intro-img:nth-child(11) { grid-row: span 6; }
+.home-intro-img:nth-child(12) { grid-row: span 3; } */
